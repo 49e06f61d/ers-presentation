@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ERS Project Brief</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #b71c1c, #0d47a1);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        main {
+            padding: 20px 40px;
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+        }
+
+        h2 {
+            color: #b71c1c;
+            border-bottom: 2px solid #0d47a1;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #0d47a1;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .illustration {
+            margin: 20px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .illustration img {
+            max-width: 80%;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        a {
+            color: #0d47a1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #777;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Emergency Response System (E.R.S.)</h1>
+        <p>Mobile & Web Platform for Incident Reporting, Alerts, and Response Coordination</p>
+    </header>
+    <main>
+        <div class="section">
+            <h2>Mobile App Overview</h2>
+            <p>Initially launching on Android with a native app for optimal performance, and extending to iOS after.
+                A mobile web-app alternative will be available for non-Android users.</p>
+        </div>
+        <div class="section">
+            <h2>Citizen Role & Features</h2>
+            <h3>Registration</h3>
+            <ul>
+                <li>Upload government ID for verification</li>
+                <li>Privacy policy link and data encryption</li>
+            </ul>
+            <div class="illustration">
+                <img src="ers-registration.png" alt="ERS Registration Flow Diagram">
+            </div>
+            <h3>Report</h3>
+            <ul>
+                <li>"Report Now" button for emergencies</li>
+                <li>Select tags (Fire, Road Accident, etc.) or add custom</li>
+                <li>Optional photo capture and description</li>
+                <li>Map confirmation for incident location</li>
+                <li>Receive real-time status updates</li>
+            </ul>
+            <div class="illustration">
+                <img src="ers-citizen-report.png" alt="ERS Report Flow Diagram">
+            </div>
+            <h3>Alerts</h3>
+            <ul>
+                <li>Minor advisories (weather, traffic, health)</li>
+                <li>Moderate alerts (flood watch, fire prevention)</li>
+                <li>Urgent alerts (flash floods, earthquakes, evacuation orders)</li>
+            </ul>
+            <h3>Medical Profile</h3>
+            <ul>
+                <li>Optional medical history for quick reference</li>
+                <li>Profile: age, blood type, allergies</li>
+                <li>History, medications, vaccinations</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Command Dashboard</h2>
+            <ul>
+                <li>Web-based, accessible on any device, but intended for larger monitors</li>
+                <li>Incident map with severity markers</li>
+                <li>Incident management and archiving</li>
+                <li>Entity administration (departments, responders, vehicles, other users)</li>
+                <li>Manage Citizen verification</li>
+            </ul>
+            <div class="illustration">
+                <img src="ers-monitoring.png" alt="ERS Report Flow Diagram">
+            </div>
+            <a href="https://codepen.io/jed1knyts/full/ZYbXEVZ" target="_blank">View example map with three responder vehicles</a>
+        </div>
+        <div class="section">
+            <h2>Responder Role & Features</h2>
+            <ul>
+                <li>Departments: DRRMO, Fire, Police, Hospital, Barangay</li>
+                <li>Respond button triggers dispatch tracking</li>
+                <li>Real-time location monitoring</li>
+                <li>Progress notifications to relevant parties</li>
+                <li>Schedules: set duty availability</li>
+            </ul>
+            <div class="illustration">
+                <img src="ers-responders.png" alt="ERS Responder Flow Diagram">
+                <img src="ers-responders-2.jpg" alt="ERS Responder Flow Diagram">
+            </div>
+        </div>
+        <div class="section">
+            <h2>Data Privacy & Security</h2>
+            <ul>
+                <li>Database & application-level encryption</li>
+                <li>Compliance with DPA 2012</li>
+                <li>Clear policies on collection, usage, retention, and user rights</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        ERS Project Brief — Confidential Document
+    </footer>
+</body>
+
+</html>

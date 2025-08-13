@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Response System E.R.S.</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 20px auto;
+        max-width: 900px;
+        padding: 20px;
+        background-color: #fdfdfd;
+        color: #333;
+    }
+    h1, h2, h3, h4, h5 {
+        font-weight: 600;
+        color: #222;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    h2 {
+        margin-top: 30px;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 5px;
+    }
+    ul {
+        margin: 10px 0 10px 25px;
+    }
+    .no-bullet {
+        list-style-type: none;
+    }
+    .with-bullet {
+        list-style-type: circle;
+    }
+    p {
+        margin: 8px 0;
+    }
+    code {
+        background-color: #f3f3f3;
+        padding: 2px 4px;
+        border-radius: 3px;
+    }
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+
+<h1>Emergency Response System (E.R.S.)</h1>
+
+<div class="section">
+    View <a href="https://49e06f61d.github.io/ers-presentation">presentation here</a>
+</div>
+
+<h3>Mobile App</h3>
+<ul>
+    <li>Citizen</li>
+    <li class="no-bullet">
+        <ul class="with-bullet">
+            <li>Report</li>
+            <li>Alerts</li>
+            <li>Identity Verification</li>
+            <li>Medical Profile</li>
+        </ul>
+    </li>
+
+    <li>Responder</li>
+    <li class="no-bullet">
+        <ul class="with-bullet">
+            <li>Respond</li>
+            <li>Schedule</li>
+        </ul>
+    </li>
+</ul>
+
+<h3>Dashboard</h3>
+<ul>
+    <li>Department</li>
+    <li class="no-bullet">
+        <ul class="with-bullet">
+            <li>Map</li>
+            <li>Responder Assignment</li>
+        </ul>
+    </li>
+
+    <li>Command Center</li>
+    <li class="no-bullet">
+        <ul class="with-bullet">
+            <li>Map</li>
+            <li>Department Assignment</li>
+            <li>Responder Assignment</li>
+            <li>Citizen Verification</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Mobile App</h2>
+<ul>
+
+</ul>
+<li>Will initially launch on Android devices, then extend to iOS once tests are all ok. </li>
+<li>Developing over Android natively will guarantee performance.</li>
+<li>For non-Android users, a web-app is an alternative, run on a mobile device’s browser (e.g., Chrome, Safari).</li>
+
+<h2>Citizen</h2>
+<p>This will be the default user role.</p>
+<h4>Features:</h4>
+<ul>
+    <li>
+        <strong>Registration</strong>
+        <ul>
+            <li>Upon registration, a government ID will be presented/uploaded, and will be subject to verification by the authorized staff. </li>
+            <li>As per Data Privacy Act, two things will be considered:
+                <br>- The application will provide links to the privacy policy.
+                <br>- Encryption of data used by the application (secured servers and databases)
+
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Report</strong>
+        <ul>
+            <li>The main feature for a citizen is incident reporting</li>
+            <li>During an incident, the citizen will press the <strong>REPORT NOW</strong> button</li>
+            <li>A default selection of tags will be shown, e.g. Fire, Road Accident, Medical Emergency, Police Assistance, etc.</li>
+            <li>If there’s no appropriate tag, a citizen can add a new one.</li>
+            <li>Then, the citizen is asked if there’s a need to take photos, and if true, camera will take photos.</li>
+            <li>After photos are taken, the citizen has the option to fill in some description about the incident. Initially, although optional, the citizen must type in. As a future upgrade, with integration of AI, the photos taken will automatically generate appropriate description that will be sent along with the photos.</li>
+            <li>After the description is added, a map will show and confirm if the current citizen’s location is the same as the incident’s. There may be cases when the report is for a different location, and in this case, the citizen will pin the actual incident location on the map.</li>
+            <li>Once the relevant tags are selected, photos taken (if any), descriptions added, and location is set, the report will be submitted to the central server/command center.</li>
+            <li>
+                Being the reporter, further updates and developments on that incident will be pushed to that citizen, e.g.
+                <ul>
+                    <li>Report has been submitted</li>
+                    <li>Relevant department (fire, police, hospital, etc) has acknowledged</li>
+                    <li>A responder has been dispatched</li>
+                    <li>The incident is being handled.</li>
+                    <li>The incident is rectified and the case is closed.</li>
+                </ul>
+            </li>
+            <li>The citizen may also have the option to opt-out (unsubscribe) of future updates</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Alerts</strong>
+        <ul>
+            <li>
+                If the citizen was the reporter of an incident, further updates and developments on that, will be pushed to that citizen, e.g.
+                <ul>
+                    <li>Report has been submitted</li>
+                    <li>Relevant department (fire, police, hospital, etc) has acknowledged</li>
+                    <li>A responder has been dispatched</li>
+                    <li>The incident is being handled</li>
+                    <li>The incident is rectified and the case is closed</li>
+                    <li>The citizen may also have the option to opt-out (unsubscribe) of future updates for the relevant incident</li>
+                </ul>
+            </li>
+            <li>
+                Citizens can directly receive notifications, reminders or alerts, e.g.
+                <ul>
+                    <li>Minor advisories / reminders
+                        <ul>
+                            <li>Weather reminders</li>
+                            <li>Traffic Advisories</li>
+                            <li>Public health, like flu season, or dengue mosquitos</li>
+                            <li>Water/Power maintenances</li>
+                        </ul>
+                    </li>
+                    <li>Moderate Alerts
+                        <ul>
+                            <li>Flood watch</li>
+                            <li>Landslide risks</li>
+                            <li>Road diversion, due to accidents, or event/celebrations, <em>“libot routes”</em> </li>
+                            <li>Fire prevention reminders</li>
+                            <li>Heatwave warnings</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Urgent/Emergency Alerts
+                        <ul>
+                            <li>Flash floods, especially on bridges or those near rivers</li>
+                            <li>Severe storm</li>
+                            <li>Earthquake alert, stay away from buildings, trees, powerlines</li>
+                            <li>Evacuation order on some areas</li>
+                            <li>Fire outbreak, staying clear of some areas</li>
+                            <li>Other suspicious threats</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <strong>Medical Profile</strong>
+        <ul>
+            <li>
+                Some citizens may upload their medical profile and indicate potential risks that may need future assistance, e.g.
+                <ul>
+                    <li>Senior citizens who are living alone, or, have difficulty on their own</li>
+                    <li>People who already have medical conditions that may regularly request ambulatory assistance</li>
+                    <li>People who have no means of transportation</li>
+                    <li>
+                        People who just want their medical history uploaded, as reference when visiting doctors or hospitals
+                        <ul>
+                            <li>
+                                This feature can be its own application, where citizen’s medical profile is in one portal, that they can share when visiting a doctor, e.g.
+                                <ul>
+                                    <li><strong>Profile</strong> - age, weight, blood-type, allergies, etc.</li>
+                                    <li><strong>History</strong> - previous visits with doctors (name, location, specialization, etc)</li>
+                                    <li><strong>Medications</strong> - records of maintenance meds taken, dosages, etc</li>
+                                    <li><strong>Vaccinations</strong> - for pediatric purposes</li>
+                                </ul>
+                            </li>
+                            <li>Possible list of doctors related to the person’s condition. If a person has kidney issues, the app may list urologists and their schedule and locations.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+
+<h2>Responder</h2>
+<p>The responders will be managed under different departments. Initially, the departments can be:</p>
+<ul>
+    <li>DRRMO (Disaster Risk Reduction and Management Office)</li>
+    <li>Fire</li>
+    <li>Police</li>
+    <li>Hospital</li>
+    <li>Barangay</li>
+</ul>
+<p>Each department will have multiple responders. In the case of the Fire department for example, say 5 firefighters will each have a Responder role, and have their own access to the app. A vehicle they manage, firetruck, can also be assigned to these responders.</p>
+
+<h4>Features:</h4>
+<ul>
+    <li>
+        <strong>Respond</strong>
+        <ul>
+            <li>Once a report has been submitted and assigned by the department or central command, the responder will be dispatched</li>
+            <li>After getting the go-signal, the department or the responders (firefighters for example) can use the app and click the <strong>RESPOND</strong> button.</li>
+            <li>
+                This action will trigger multiple things:
+                <ul>
+                    <li>In the central command, their map will show that the firefighters are en-route, and their location can now be monitored</li>
+                    <li>In cases where multiple departments are dispatched (firetrucks, police patrols, ambulance, etc)), the central command should be able to view and track multiple responders in the map</li>
+                    <li>Relevant departments/responders and even citizens (those who reported, or subscribed) will receive notifications on the progress</li>
+                </ul>
+            </li>
+            <li>Upon arrival at the scene, responders will have the option to trigger <strong>ARRIVED</strong>, and this will notify relevant parties</li>
+            <li>Once the incident is rectified, the responders have the ability to handle the report and may trigger <strong>CLOSE</strong>, again to notify and trigger and change in status.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Alerts</strong>
+        <ul>
+            <li>Similar to citizens, responders will also receive similar alerts, but with more details than a citizen will have</li>
+            <li>Certain progress details maybe set, to limit what is sent out to users</li>
+            <li>In the case of fire for example, apart from the Fire department, police and hospital, some responders may be from the barangay level, e.g. captains, councilors or tanods. Especially in farther or remote areas, it's usually the barangay tanods that are the first responders. They will have the same <strong>REPORT</strong> trigger to inform other departments as well.</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Schedule</strong>
+        <ul>
+            <li>Duties can also be logged in the app. This way, the day’s on-duty responders will show as “online”.</li>
+            <li>Responders can designate their schedules upon logging in, and their availability can be toggled as available or not</li>
+            <li>In cases where there’s an incident and departments are understaffed, the app can show responders that are off-duty, but can be alerted if necessary</li>
+        </ul>
+    </li>
+</ul>
+
+<h2>Command Dashboard</h2>
+<ul>
+    <li>The dashboard will be a web-app, and can be accessed, with a browser, from a mobile device, computer, or can also be set up to a big monitor.</li>
+    <li>THe dashboard will mainly show the map with the reported incidents,  incident photos, tracking of responders</li>
+    <li>
+        <strong>Map</strong>
+        <ul>
+            <li>Show reported incidents, by showing pins, with additional status, to visually represent types of the incident (e.g. fire, ambulatory, etc), and severity and priority</li>
+            <li>Track movements of responders, provided that at least one of them is able to transmit data en-route the incident</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Incident Management</strong>
+        <ul>
+            <li>Shows list of reported incidents</li>
+            <li>View incident details, photos for assessment</li>
+            <li>
+                Assign Departments or Individual Responders
+                <ul>
+                    <li>Able to choose which department and responders to dispatch</li>
+                    <li>Able to toggle involved responders, if required</li>
+                </ul>
+            </li>
+            <li>
+                Update status of incident (on top of the responder’s updates)
+                <br><em>e.g.</em> Dispatched-Responder, Handling-Incident, Incident-Rectified, etc
+            </li>
+            <li>Archive incidents once closed, viewable in incident history</li>
+        </ul>
+    </li>
+    <li>
+        <strong>Entity Administration</strong>
+        <ul>
+            <li>
+                Manage Departments
+                <ul>
+                    <li>Create Read Update Delete (CRUD) </li>
+                </ul>
+            </li>
+            <li>
+                Manage Responders
+                <ul>
+                    <li>Create Read Update Delete (CRUD) </li>
+                    <li>Assign Responders under one or many departments (Department-Responders)</li>
+                </ul>
+            </li>
+            <li>
+                Manage Vehicles
+                <ul>
+                    <li>Create Read Update Delete (CRUD) </li>
+                    <li>Assign vehicle under departments, and under responders (normally operators/drivers)</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+<h2>Command Dashboard</h2>
+<ul>
+    <li>Manage Citizen registrations</li>
+    <li>Get alerts of new registrations, pending verifications</li>
+    <li>View citizen details, approve or reject registration (with reason)</li>
+</ul>
+
+
+<h2>Data Privacy</h2>
+<ul>
+    <li>
+        Encrypt sensitive info in DB (MySQL)
+        <br>Application-level encryption
+        <ul>
+            <li>Data is encrypted in application before stored in database</li>
+            <li>
+                Pros:
+                <ul>
+                    <li>Data is safe even if database is dumped</li>
+                    <li>Easy to rotate keys</li>
+                </ul>
+            </li>
+            <li>
+                Cons:
+                <ul>
+                    <li>Can’t filter or search (even partial search) unless a hashed column is generated as well, although sensitive info like National-ID#, or Photo path, are usually not searched (name instead)</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        DPA 2012 Privacy Policy
+        <ul>
+            <li>Compliance to <a href="https://privacy.gov.ph/data-privacy-act/">Philippines Data Privacy Act</a></li>
+            <li>
+                with policy link and <em>I agree to privacy policy</em> action in both mobile and web app
+                <ul>
+                    <li>
+                        Here further details will be shown, including
+                        <ul>
+                            <li>the organization (name, contact details, etc), </li>
+                            <li>scope and purpose of the data collected (name, address, photo, ID, medical profile, etc), </li>
+                            <li>method of collection (forms, registration, camera selfie, etc), </li>
+                            <li>data use and processing (how the data is used, who processes it), </li>
+                            <li>data sharing (if there are 3rd parties involved with the data), </li>
+                            <li>data retention and disposal, </li>
+                            <li>data protection (admin - policies and training, technicals - encryption, secured servers, and physical - controlled office access)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Explain the user’s rights to
+                        <ul>
+                            <li>be informed, </li>
+                            <li>access their data, </li>
+                            <li>object to processing, </li>
+                            <li>request correction, </li>
+                            <li>request deletion/blocking, </li>
+                            <li>file complaints, </li>
+                            <li>be compensated for damages if proven, </li>
+                            <li>data portability (receive a copy in electronic or structured format)</li>
+                        </ul>
+                    </li>
+                    <li>Indicate types and purpose of analytics or tracking technologies </li>
+                    <li>State that policy may have updates and changes and that users will be informed</li>
+                    <li>Then show the policy effectivity-dates</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+</body>
+</html>
